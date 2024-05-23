@@ -1,0 +1,106 @@
+@import '/home/devilmuffin/.cache/wal/colors-waybar.css';
+
+body,
+#waybar,
+.main-container {
+  font-family: "Fira Sans Semibold", FontAwesome, Roboto, Helvetica, Arial,
+    sans-serif;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: background-color 0.5s ease-in-out;
+  border: 3px solid @color2;
+  border-radius: 20px;
+}
+
+#waybar:hover,
+.main-container:hover {
+  background-color: rgba(0, 0, 0, 0.9);  /* Slightly darker background on hover */
+}
+
+#workspaces,
+#clock,
+#pulseaudio,
+#network,
+#bluetooth.on,
+#bluetooth.connected,
+#battery,
+#network.wifi {
+  border-width: 0;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+#workspaces {
+  background: transparent;
+  font-weight: bold;
+  font-style: normal;
+  opacity: 0.8;
+  font-size: 16px;
+  color: #FF1493;
+}
+#workspaces button {
+  background: transparent;
+  transition: all 0.3s ease-in-out;
+  opacity: 0.4;
+}
+
+#workspaces button.active {
+  background-color: @color2;
+  opacity: 0.9;
+  margin: 8px;
+  border-radius: 5px;
+}
+#workspaces button:hover {
+  opacity: 0.8;
+  margin-right: 4px;
+  margin-left: 4px;
+  color: white;
+}
+
+#clock,
+#pulseaudio,
+#network,
+#bluetooth.on,
+#battery,
+#bluetooth.connected {
+  background-color: transparent;
+  font-size: 16px;
+  color: @color2;
+  opacity: 0.8;
+  padding: 0px;
+  font-size: 24px;
+}
+
+#clock:hover {
+  transition: all 0.3s ease-in-out;
+  color: #FF1493;
+}
+
+#pulseaudio.muted {
+  background-color: @color2;
+  color: #FF0000;
+}
+
+#bluetooth.off {
+  background-color: #FF0000;
+}
+
+#pulseaudio {
+  padding-right: 4px;
+}
+
+#network {
+  padding-right: 8px;
+}
+
+#battery {
+  margin-right: 5px;
+  font-size: 16px;
+}
+
+#clock {
+  margin-right: 10px;
+  font-size: 16px;
+}
+

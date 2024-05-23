@@ -1,0 +1,79 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 50,
+    "spacing": 20,
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["battery", "bluetooth", "pulseaudio", "network", "clock"],
+    "hyprland/workspaces": {
+        "active-only":false,
+        "all-outputs": true,
+        "format": "{}",
+        "on-click": "activate",
+        "persistent-workspaces":{
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": []
+        }
+      },    
+
+    "clock": {
+        "timezone": "Europe/London",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": "{:%I:%M %p}",
+	"tooltip-position": "right"
+    },
+
+    "pulseaudio": {
+        "scroll-step": 0.5,
+        "format":"{icon}",
+        "format-muted": " ",
+        "format-source": "{volume}%  ",
+        "format-source-muted": " ",
+        "format-icons": {
+            "headphone": " ",
+            "hands-free": " ",
+            "headset": " ",
+            "default": ["", " ", " "]
+        },
+        "on-click": "pavucontrol",
+        "tooltip": false
+    },
+
+    "bluetooth": {
+        "format": "{icon}",
+        "format-disabled": "󰂲",
+        "format-off": "󰂲",
+	"format-on": "",
+        "interval": 30,
+        "on-click": "blueman-manager",
+        "tooltip": false
+    },
+
+    "network": {
+        "format": "{ifname}",
+        "format-wifi": " ",
+        "format-ethernet": " ",
+        "format-disconnected": "睊",
+        "tooltip": false
+    },
+
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": "󰂄 {capacity}%",
+        "format-plugged": "󰚥 {capacity}%",
+        "format-alt": "{time} {icon}",
+        "format-full": "  {capacity}%",
+        "format-icons": ["󰂄","󰚥", " "]
+    },
+
+
+    
+}
